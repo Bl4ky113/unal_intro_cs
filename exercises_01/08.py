@@ -28,10 +28,10 @@ def main () -> None:
             retirement = int(input("Ingrese la cantidad a retirar: $"))
 
             if retirement < MIN_RETIREMENT:
-                raise ValueError('Valor ingresado es menor a ${MIN_RETIREMENT}')
+                raise ValueError(f'Valor ingresado es menor a ${MIN_RETIREMENT}')
 
             if retirement > MAX_RETIREMENT:
-                raise ValueError('Valor ingresado mayor a ${MAX_RETIREMENT}')
+                raise ValueError(f'Valor ingresado mayor a ${MAX_RETIREMENT}')
 
             break
 
