@@ -1,0 +1,44 @@
+[
+  {
+    "name": "b",
+    "relative_mass": 1.017,
+    "relative_radius": 1.121,
+    "temperature_kelvin": 400
+  },
+  {
+    "name": "c",
+    "relative_mass": 1.156,
+    "relative_radius": 1.095,
+    "temperature_kelvin": 342
+  },
+  {
+    "name": "d",
+    "relative_mass": 0.297,
+    "relative_radius": 0.784,
+    "temperature_kelvin": 288
+  },
+  {
+    "name": "e",
+    "relative_mass": 0.772,
+    "relative_radius": 0.910,
+    "temperature_kelvin": 251
+  },
+  {
+    "name": "f",
+    "relative_mass": 0.934,
+    "relative_radius": 1.046,
+    "temperature_kelvin": 219
+  },
+  {
+    "name": "g",
+    "relative_mass": 1.148,
+    "relative_radius": 1.148,
+    "temperature_kelvin": 199
+  },
+  {
+    "name": "h",
+    "relative_mass": 0.321,
+    "relative_radius": 0.773,
+    "temperature_kelvin": 167
+  }
+]
