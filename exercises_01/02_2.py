@@ -8,7 +8,7 @@ def main () -> None:
     result_sum: int = 0
 
     try:
-        digit = int(input("Escriba un digito: "))
+        digit = int(input())
 
     except ValueError as e:
         print(f"ERROR DEL VALOR INGRESADO:\n{type(e)}\n{e}")
@@ -20,7 +20,7 @@ def main () -> None:
     for single_digit in str(digit):
         result_sum += int(single_digit)
 
-    print(f"Resultado de la Suma de los digitos de: {digit}\n\t{result_sum}")
+    print(result_sum)
 
 if __name__ == "__main__":
     main()

@@ -7,7 +7,7 @@ def main () -> None:
     range_to_sum: int = 0
 
     try:
-        range_to_sum = int(input("Ingrese el rango qué quiere sumar: "))
+        range_to_sum = int(input())
 
         if range_to_sum <= 0:
             raise ValueError("El valor ingresado debe ser mayor a 0")
@@ -21,7 +21,7 @@ def main () -> None:
 
     result: int = calc_range_sum(range_to_sum)
 
-    print(f"Resultado de la Sumatoria: \n\t{result}")
+    print(result)
 
 def calc_range_sum(range_length: int) -> int:
     sum: int = 0

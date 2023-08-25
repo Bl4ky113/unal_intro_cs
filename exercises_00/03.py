@@ -10,8 +10,8 @@ def main () -> None:
     height: float = 0
 
     try:
-        weight = float(input("Ingrese su peso: "))
-        height = float(input("Ingrese su altura: "))
+        height = float(input())
+        weight = float(input())
 
     except ValueError as e:
         print(f"ERROR VALOR INVALIDO:\n{type(e)}\n{e}")
@@ -20,12 +20,27 @@ def main () -> None:
         print(f"ERROR:\n{type(e)}\n{e}")
         return
 
-    result: float = calc_body_surface_area(weight, height)
+    result_mosteller: float = calc_body_surface_area_mosteller(weight, height)
+    result_dubois: float = calc_body_surface_area_dubois(weight, height)
+    result_haycock: float = calc_body_surface_area_haycock(weight, height)
+    # result_gehan_george: float = calc_body_surface_area_gehan_george(weight, height)
 
-    print(f"Resultado Área total del cuerpo:\n\t{result}")
+    print(f"{result_mosteller:.3}")
+    print(f"{result_dubois:.3}")
+    print(f"{result_haycock:.3}")
+    # print(result_gehan_george)
 
-def calc_body_surface_area (weight: float, height: float) -> float:
-    return math.sqrt(weight * height) / 60
+def calc_body_surface_area_mosteller (weight: float, height: float) -> float:
+    return math.sqrt((weight * height) / 3600)
+
+def calc_body_surface_area_haycock (weight: float, height: float) -> float:
+    return 0.024265 * (weight ** 0.5378) * (height ** 0.3964)
+
+def calc_body_surface_area_dubois (weight: float, height: float) -> float:
+    return 0.007184 * (weight ** 0.425) * (height ** 0.725)
+
+def calc_body_surface_area_gehan_george (weight: float, height: float) -> float:
+    return 0.0235 * (height ** 0.42246) * (height ** 0.51456)
 
 if __name__ == '__main__':
     main()
