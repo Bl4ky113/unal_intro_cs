@@ -24,6 +24,5 @@ def main () -> None:
 
     print(max_num)
 
-
 if __name__ == "__main__":
     main()
