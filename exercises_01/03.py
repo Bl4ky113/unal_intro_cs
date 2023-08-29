@@ -25,7 +25,7 @@ def main () -> None:
     print(f"Area del Triángulo Equilatero: {result}")
 
 def calculate_area_triangle (side: int) -> int:
-    return ( ((side ** 2) * math.sqrt(3)) / 4 )
+    return round(((side ** 2) * math.sqrt(3)) / 4, 2)
 
 if __name__ == '__main__':
     main()

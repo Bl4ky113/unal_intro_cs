@@ -31,16 +31,16 @@ def main () -> None:
     # print(result_gehan_george)
 
 def calc_body_surface_area_mosteller (weight: float, height: float) -> float:
-    return math.sqrt((weight * height) / 3600)
+    return round(math.sqrt((weight * height) / 3600), 2)
 
 def calc_body_surface_area_haycock (weight: float, height: float) -> float:
-    return 0.024265 * (weight ** 0.5378) * (height ** 0.3964)
+    return round((0.024265) * (weight ** 0.5378) * (height ** 0.3964), 2)
 
 def calc_body_surface_area_dubois (weight: float, height: float) -> float:
-    return 0.007184 * (weight ** 0.425) * (height ** 0.725)
+    return round(0.007184 * (weight ** 0.425) * (height ** 0.725), 2)
 
 def calc_body_surface_area_gehan_george (weight: float, height: float) -> float:
-    return 0.0235 * (height ** 0.42246) * (height ** 0.51456)
+    return round(0.0235 * (height ** 0.42246) * (height ** 0.51456), 2)
 
 if __name__ == '__main__':
     main()

@@ -24,17 +24,32 @@ class Coordinate ():
         except Exception as e:
             print(f"ERROR:\n{type(e)}\n{e}")
 
+class Circle (Coordinate):
+    radius: float
+
+    def __init__ (self):
+        super().__init__()
+
+        try:
+            self.radius = float(input("r:"))
+        except ValueError as e:
+            print(f"ERROR AL INGRESAR LOS VALORES:\n{type(e)}\n{e}")
+        except Exception as e:
+            print(f"ERROR:\n{type(e)}\n{e}")
+
+
 def main () -> None:
+    circle = Circle()
     point = Coordinate()
 
     # distance_from_zero = math.sqrt(point.x ** 2 + point.y ** 2)
-    distance_from_zero = ( (point.x ** 2) + (point.y ** 2) ) ** (1 / 2)
+    distance_from_zero = ( abs(point.x - circle.x ** 2) + abs(point.y - circle.y ** 2) ) ** (1 / 2)
 
-    if distance_from_zero > CIRCLE_RADIUS:
-        print("Fuera del Circulo")
+    if distance_from_zero > circle.radius:
+        print("no")
         return
 
-    print("Dentro circulo")
+    print("yes")
 
 if __name__ == '__main__':
     main()
