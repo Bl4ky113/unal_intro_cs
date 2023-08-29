@@ -8,7 +8,7 @@ import math
 def main () -> None:
     side_length: int = 1
     try:
-        side_length = int(input("Medida del lado del Triángulo: "))
+        side_length = int(input())
 
         if side_length <= 0:
             raise ValueError('ERROR MEDIDA NO PUEDE SER IGUAL O MENOR A 0')
@@ -22,10 +22,10 @@ def main () -> None:
 
     result: int = calculate_area_triangle(side_length)
 
-    print(f"Area del Triángulo Equilatero: {result}")
+    print(f"{result:.2f}")
 
 def calculate_area_triangle (side: int) -> int:
-    return round(((side ** 2) * math.sqrt(3)) / 4, 2)
+    return round(((side ** 2) * (3 ** ( 1 / 2 )) ) / 4, 2)
 
 if __name__ == '__main__':
     main()

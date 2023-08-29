@@ -23,12 +23,12 @@ class Line ():
         while True:
             try:
                 self.initial_coords = (
-                    float(input(f"Ingrese la Coordenada Inicial X de la línea {self.name}: ")),
-                    float(input(f"Ingrese la Coordenada Inicial Y de la línea {self.name}: "))
+                    float(input()),
+                    float(input())
                 )
                 self.final_coords = (
-                    float(input(f"Ingrese la Coordenada Final X de la línea {self.name}: ")),
-                    float(input(f"Ingrese la Coordenada Final Y de la línea {self.name}: "))
+                    float(input()),
+                    float(input())
                 )
 
                 if self.initial_coords == self.final_coords:
@@ -66,14 +66,15 @@ def main () -> None:
 
     does_lines_intercept, coord_interception_x, coord_interception_y = lines_intercept(line_1, line_2)
 
-    print(f"La línea {line_1.name} y la línea {line_2.name}{' No' if not does_lines_intercept else ''} se intersectan")
+    # print(f"La línea {line_1.name} y la línea {line_2.name}{' No' if not does_lines_intercept else ''} se intersectan")
 
-    if (not does_lines_intercept or (coord_interception_x == None and coord_interception_y == None )):
-        return
+    # if (not does_lines_intercept or (coord_interception_x == None and coord_interception_y == None )):
+        # return
 
     line_is_in_range = check_interception_in_range(line_1, line_2, (coord_interception_x, coord_interception_y))
 
-    print(f"La Intersección de la Línea {line_1.name} y la Línea {line_2.name}{ ' No ' if not line_is_in_range else ' ' }esta en el Segmento Definido")
+    # print(f"La Intersección de la Línea {line_1.name} y la Línea {line_2.name}{ ' No ' if not line_is_in_range else ' ' }esta en el Segmento Definido")
+    print('true' if line_is_in_range else 'false')
 
 def lines_intercept (line_1: Line, line_2: Line):
     diff_slope: float = line_1.slope - line_2.slope
@@ -87,11 +88,9 @@ def lines_intercept (line_1: Line, line_2: Line):
         print(f"La línea {line_1.name} y la línea {line_2.name} son paralelas")
         return False, None, None
 
-    x_intercept: float = round(diff_y_intercept / diff_slope, 5)
-    y_intercept_1: float= round((line_1.slope * x_intercept) + line_1.y_intercept, 5)
-    y_intercept_2: float = round((line_2.slope * x_intercept) + line_2.y_intercept, 5)
-
-    print(x_intercept, y_intercept_1, y_intercept_2)
+    x_intercept: float = (diff_y_intercept / diff_slope)
+    y_intercept_1: float= (line_1.slope * x_intercept) + line_1.y_intercept
+    y_intercept_2: float = (line_2.slope * x_intercept) + line_2.y_intercept
 
     return (x_intercept, y_intercept_2) == (x_intercept, y_intercept_1), x_intercept, y_intercept_1
 

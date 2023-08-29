@@ -30,7 +30,6 @@ def calc_distance_points (coord_list: list[list[float]]) -> bool:
         print(coord_first, coord_second)
 
         diff_coord = (coord_second[0] - coord_first[0]) / (coord_second[1] - coord_first[1])
-        
 
     return True
 

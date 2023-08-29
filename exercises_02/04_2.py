@@ -26,7 +26,7 @@ def main () -> None:
     month_number: int = 0
 
     try:
-        month_number = int(input("season:"))
+        month_number = int(input())
     except ValueError as e:
         print(f"ERROR AL INGRESAR LOS VALORES:\n{type(e)}\n{e}")
     except Exception as e:
@@ -34,6 +34,7 @@ def main () -> None:
 
     if month_number not in MONTHS_NUMBERS:
         print('Mes invalido')
+        return
         # raise IndexError(f"Out of Season index: {month_number}")
 
     print(MONTHS[month_number])

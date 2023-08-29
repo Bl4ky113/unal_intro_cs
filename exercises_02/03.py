@@ -17,8 +17,8 @@ class Coordinate ():
 
     def __init__ (self):
         try:
-            self.x = float(input("x:"))
-            self.y = float(input("y:"))
+            self.x = float(input())
+            self.y = float(input())
         except ValueError as e:
             print(f"ERROR AL INGRESAR LOS VALORES:\n{type(e)}\n{e}")
         except Exception as e:
@@ -31,7 +31,7 @@ class Circle (Coordinate):
         super().__init__()
 
         try:
-            self.radius = float(input("r:"))
+            self.radius = float(input())
         except ValueError as e:
             print(f"ERROR AL INGRESAR LOS VALORES:\n{type(e)}\n{e}")
         except Exception as e:
@@ -42,8 +42,7 @@ def main () -> None:
     circle = Circle()
     point = Coordinate()
 
-    # distance_from_zero = math.sqrt(point.x ** 2 + point.y ** 2)
-    distance_from_zero = ( abs(point.x - circle.x ** 2) + abs(point.y - circle.y ** 2) ) ** (1 / 2)
+    distance_from_zero = ( abs((point.x - circle.x) ** 2) + abs((circle.y - point.y) ** 2) ) ** (1 / 2)
 
     if distance_from_zero > circle.radius:
         print("no")
