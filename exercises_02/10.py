@@ -89,9 +89,9 @@ def main () -> None:
     line: Line = Line(coord_1.x, coord_2.x, coord_1.y, coord_2.y)
 
     if line.slope > 0:
-        print(f"Recta Creciente y={line.slope:.2f}x{'+' if line.calculate_y_intercept > 0 else '-'}{line.y_intercept:.2f}")
+        print(f"Recta Creciente y={line.slope:.2f}x{'+' if line.y_intercept > 0 else '-'}{line.y_intercept:.2f}")
     else:
-        print(f"Recta Decreciente y={line.slope:.2f}x{'+' if line.calculate_y_intercept > 0 else '-'}{line.y_intercept:.2f}")
+        print(f"Recta Decreciente y={line.slope:.2f}x{'+' if line.y_intercept > 0 else '-'}{line.y_intercept:.2f}")
 
 if __name__ == "__main__":
     main()
