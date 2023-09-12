@@ -21,7 +21,7 @@ def timer (function: Callable) -> Callable:
 
 @timer
 def main () -> None:
-    num_list: list[int] = [ random.randint(-4096, 4096) for _ in range(100_000) ]
+    num_list: list[int] = [ random.randint(-4096, 4096) for _ in range(10_000_000) ]
     greatest_number: int = 0
     leastest_number: int = 0
     difference_numbers: int = 0

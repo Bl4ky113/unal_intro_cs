@@ -37,7 +37,6 @@ class Circle (Coordinate):
         except Exception as e:
             print(f"ERROR:\n{type(e)}\n{e}")
 
-
 def main () -> None:
     circle = Circle()
     point = Coordinate()
