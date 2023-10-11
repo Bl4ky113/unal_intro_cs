@@ -32,13 +32,14 @@ def main () -> None:
     print(f"Resultados:\n\tVolumen: {result_volume}\n\tÁrea Superficie Total: {result_area}")
 
 def calc_cone_volume (height: int, radius: int) -> int:
-    return (1 / 3) * math.pi * (radius ** 2) * height
+	print(math.pi * (radius ** 2) * height)
+	return (1 / 3) * math.pi * (radius ** 2) * height
 
 def calc_cone_slant (height: int, radius: int) -> int:
-    return math.sqrt(radius ** 2 + height ** 2)
+	return math.sqrt(radius ** 2 + height ** 2)
 
 def calc_cone_area (height: int, radius: int) -> int:
-    return calc_cone_base_area(radius) + calc_cone_lateral_area(height, radius, calc_cone_slant(height, radius))
+	return calc_cone_lateral_area(height, radius, calc_cone_slant(height, radius))
 
 def calc_cone_lateral_area (height: int, radius: int, slant: int) -> int:
     return math.pi * radius * slant
