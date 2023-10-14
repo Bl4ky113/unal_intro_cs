@@ -3,16 +3,18 @@
 		Encuentre el volumen y el área de la superficie de un cono truncado.
 */ 
 
+#define _USE_MATH_DEFINES
+
 #include <cmath>
 #include <iostream>
-#include <math.h> // for M_PI
+#include <stdio.h>
 
 double calc_cone_volume (int height, int radius_bottom, int radius_top) {
 	return ( 1.0 / 3.0 ) * M_PI * height * (pow(radius_top, 2) + radius_top * radius_bottom + pow(radius_bottom, 2));
 }
 
 double calc_cone_slant (int radius_top, int radius_bottom, int height) {
-	return sqrt(pow(radius_top - radius_bottom, 2) + pow(height, 2));
+	return pow(pow(radius_top - radius_bottom, 2) + pow(height, 2), 0.5);
 }
 
 double calc_cone_lateral_area (int height, int radius_bottom, int radius_top) {
@@ -39,7 +41,7 @@ int main (void) {
 	std::cin >> height;
 
 	std::cout.setf(std::ios::fixed);
-	std::cout.precision(5);
+	std::cout.precision(2);
 	std::cout << calc_cone_area(height, radius_bottom, radius_top) << '\n'; 
 	std::cout << calc_cone_volume(height, radius_bottom, radius_top);
 	return 0;

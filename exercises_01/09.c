@@ -11,7 +11,7 @@ double calc_cone_volume (int cone_height, int cone_radius) {
 }
 
 double calc_cone_slant (int height, int radius) {
-	return sqrt(pow(radius, 2) + pow(height, 2));
+	return pow(pow(radius, 2.0) + pow(height, 2.0), 0.5);
 }
 
 double calc_cone_lateral_area(int radius, double slant) {
