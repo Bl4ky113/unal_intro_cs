@@ -21,5 +21,5 @@ int main (void) {
 		result_area += calc_triangle_area(circle_radius);
 	}
 
-	printf("%.2lf", result_area);
+	printf("%.2lf\n", result_area);
 }

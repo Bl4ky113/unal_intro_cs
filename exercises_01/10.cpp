@@ -43,6 +43,6 @@ int main (void) {
 	std::cout.setf(std::ios::fixed);
 	std::cout.precision(2);
 	std::cout << calc_cone_area(height, radius_bottom, radius_top) << '\n'; 
-	std::cout << calc_cone_volume(height, radius_bottom, radius_top);
+	std::cout << calc_cone_volume(height, radius_bottom, radius_top) << '\n';
 	return 0;
 }
