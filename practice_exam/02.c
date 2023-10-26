@@ -10,7 +10,7 @@ int main (void) {
 
 	scanf("%d", &number);
 
-	printf("%x", number);
+	printf("%b", number);
 
 	return 0;
 } 

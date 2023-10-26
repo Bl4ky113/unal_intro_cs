@@ -12,15 +12,15 @@
 int main (void) {
 	char continue_input[16] = "yes";
 	for (int i = 1; i <= 1000; i++) {
-		printf("%d\n", i);
-
 		if (i % 20 == 0) {
 			fgets(continue_input, 16, stdin);
 
 			if (strncmp(continue_input, "yes", 3) != 0) {
 				break;
-			}
-		}
+		 	}
+		}	
+
+		printf("%d\n", i);
 	}
 
 	return 0;

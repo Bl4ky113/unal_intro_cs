@@ -19,8 +19,6 @@ int main (void) {
 		double interest = capital * (annual_interest);
 		capital += interest;
 		i += 1;
-
-		std::cout << capital << '\t' << interest << '\t' << i << '\n';
 	}
 
 	std::cout << i << "\n";
