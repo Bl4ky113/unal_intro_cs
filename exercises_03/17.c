@@ -7,20 +7,29 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
+#define RANGE_LIMIT 1000
+#define BUFFER_LIMIT 3
+
 int main (void) {
-	char continue_input[16] = "yes";
-	for (int i = 1; i <= 1000; i++) {
+	for (int i = 0; i < RANGE_LIMIT; i++) {
+
 		if (i % 20 == 0) {
-			fgets(continue_input, 16, stdin);
+			char *confirmation_buffer;
+			size_t buffer_size = BUFFER_LIMIT;
 
-			if (strncmp(continue_input, "yes", 3) != 0) {
+			confirmation_buffer = (char *) malloc(buffer_size * sizeof(char));
+
+			getline(&confirmation_buffer, &buffer_size, stdin);
+
+			if (strcmp(confirmation_buffer, "yes\n") != 0) {
 				break;
-		 	}
-		}	
+			}
+		}
 
-		printf("%d\n", i);
+		printf("%d\n", i + 1);
 	}
 
 	return 0;

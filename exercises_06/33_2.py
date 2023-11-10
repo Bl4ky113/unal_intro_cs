@@ -18,7 +18,7 @@ def str_format_matrix (matrix: list[list[int]]) -> str:
     for matrix_slice in matrix:
         matrix_slice_str = ""
         for matrix_value in matrix_slice:
-            matrix_slice_str += str(matrix_value) + ' '
+            matrix_slice_str += str(matrix_value)
 
         if matrix.index(matrix_slice) != len(matrix) - 1:
             matrix_slice_str += '\n'

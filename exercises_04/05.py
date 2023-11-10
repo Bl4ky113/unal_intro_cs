@@ -23,7 +23,7 @@ def get_multiples_from_num_in_range(num: int, range_start:int=0, range_end:int=1
 
         i += 1
 
-    return num_list
+    return len(num_list)
 
 if __name__ == '__main__':
     main()

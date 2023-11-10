@@ -19,9 +19,9 @@ int main (void) {
 	std::cin >> slope;
 	std::cin >> intersect;
 	
-	distance = fabs((slope * point_x) - (point_y + intersect)) / pow(pow(slope, 2) + 1, 0.5);
-
-	std::cout << distance << '\n';
+	distance = fabs(slope * point_x - point_y + intersect) / sqrt(pow(slope, 2) + 1);
+	
+	printf("%.3lf\n", distance);
 
 	return 0;
 }

@@ -19,6 +19,7 @@ public class Main {
 		}
 
 		System.out.printf("Primo\n");
+		userInput.close();
 		return;
 	}
 }
