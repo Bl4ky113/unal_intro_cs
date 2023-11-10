@@ -1,9 +1,9 @@
 
 /* 
-	Lea el tamaño del arreglo, lea uno a uno sus elementos y finalmente imprímalo.
+	Lea el tamaño del arreglo, lea uno a uno sus elementos y calcule su suma y promedio entero
 */
 
-#include <stdio.h>
+#include <iostream>
 
 int main (void) {
 	int size = 0;
