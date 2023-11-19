@@ -4,9 +4,24 @@
 
 #define SIZE 40
 
+void ref_function (double *foo) {
+	*foo = 120;
+	printf("%lf\n", *foo);
+	return;
+}
+
 int main (int argc, char **argv) {
   double foo = 2e10;
   double bar = 1e10;
+
+  double* foo_1 = &foo;
+  double *foo_2 = &foo;
+
+  printf("%x\t%x\n", foo_1, &foo);
+
+  ref_function(&foo);
+
+  printf("- %lf\n", foo);
 
   char foo1 = 'm';
 
