@@ -17,6 +17,8 @@ int main (int argc, char **argv) {
   double* foo_1 = &foo;
   double *foo_2 = &foo;
 
+  printf("%d\t%d\t%d\n", sizeof(int *), sizeof(char *), sizeof(long double *));
+
   printf("%x\t%x\n", foo_1, &foo);
 
   ref_function(&foo);

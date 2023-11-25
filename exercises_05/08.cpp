@@ -38,7 +38,7 @@ int *sort_arr (int size, int *arr) {
 			}
 
 			int value_1 = arr[j];
-			int value_2 = arr[j + 1];
+			in value_2 = arr[j + 1];
 
 			if (value_1 > value_2) {
 				arr[j] = value_2;
