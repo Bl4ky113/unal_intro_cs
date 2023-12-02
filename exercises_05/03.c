@@ -1,6 +1,6 @@
 
 /* 
-	Lea el tamaño del arreglo, lea uno a uno sus elementos y finalmente imprímalo.
+	Lea el tamaño del arreglo, lea uno a uno sus elementos y finalmente imprima los valores negativos.
 */
 
 #include <stdio.h>
